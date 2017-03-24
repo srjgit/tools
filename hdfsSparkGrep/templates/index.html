@@ -1,0 +1,13 @@
+$def with (name, skey, sdt, edt, data)
+
+$if name:
+    <b>Hello </b><em>$name...</em>
+$else:
+    <em>Hello</em>, world!
+<br>
+<b>Start date:</b> <em>$sdt</em>, <b>End date:</b> <em>$edt</em> <b>Search key:</b> <em>$skey</em>
+<br>
+<br>
+<b>Search Results: </b>
+$for line in data.split('\n'):
+    <br><font face="courier" size=-1>$line</font></br>  
